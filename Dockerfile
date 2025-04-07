@@ -13,6 +13,6 @@ RUN npm run build --prod
 FROM nginx:alpine
 COPY --from=build /app/dist/dockerize-angular-app/browser /usr/share/nginx/html
 ##COPY dist/dockerize-angular-app/browser /usr/share/nginx/html
-EXPOSE 8082
+EXPOSE 8083
 CMD ["nginx", "-g", "daemon off;"]
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -226,7 +226,21 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>Thanks and Congratulations Mritunjay Singh! Your app is running. 🎉</p>
+      <div>
+         <table border="2">
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+          </tr>
+           @for (product of products; track $index) {
+            <tr>
+              <td>{{product.productId}}</td>
+              <td>{{product.productName}}</td>
+            </tr>
+           }
+         </table>
+        </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
